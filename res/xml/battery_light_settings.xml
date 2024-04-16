@@ -14,12 +14,12 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <com.yasp.settings.preferences.SystemSettingSwitchPreference
+    <com.nasp.settings.preferences.SystemSettingSwitchPreference
         android:key="battery_light_allow_on_dnd"
         android:title="@string/battery_light_allow_on_dnd_title"
         android:defaultValue="false" />
 
-    <com.yasp.settings.preferences.SystemSettingSwitchPreference
+    <com.nasp.settings.preferences.SystemSettingSwitchPreference
         android:key="battery_light_low_blinking"
         android:title="@string/battery_light_low_blinking_title"
         android:defaultValue="false" />
@@ -27,22 +27,22 @@
     <PreferenceCategory
         android:key="battery_light_cat"
         android:title="@string/battery_light_cat">
-        <com.yasp.settings.preferences.colorpicker.ColorPickerPreference
+        <com.nasp.settings.preferences.colorpicker.ColorPickerPreference
             android:key="battery_light_low_color"
             android:title="@string/battery_light_low_color"
             android:defaultValue="0xFFFF0000" />
 
-        <com.yasp.settings.preferences.colorpicker.ColorPickerPreference
+        <com.nasp.settings.preferences.colorpicker.ColorPickerPreference
             android:key="battery_light_medium_color"
             android:title="@string/battery_light_medium_color"
             android:defaultValue="0xFFFFFF00" />
 
-        <com.yasp.settings.preferences.colorpicker.ColorPickerPreference
+        <com.nasp.settings.preferences.colorpicker.ColorPickerPreference
             android:key="battery_light_full_color"
             android:title="@string/battery_light_full_color"
             android:defaultValue="0xFFFFFF00" />
 
-        <com.yasp.settings.preferences.colorpicker.ColorPickerPreference
+        <com.nasp.settings.preferences.colorpicker.ColorPickerPreference
             android:key="battery_light_reallyfull_color"
             android:title="@string/battery_light_reallyfull_color"
             android:defaultValue="0xFF00FF00" />

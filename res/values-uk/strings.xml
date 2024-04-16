@@ -16,7 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Title -->
-    <string name="yaap_settings_title">Налаштування YAAP</string>
+    <string name="naap_settings_title">Налаштування NAAP</string>
 
     <!-- Categories -->
     <string name="button_title">Кнопки</string>
@@ -60,7 +60,7 @@
     <!-- QS footer text -->
     <string name="qs_footer_text_show_title">Відображати текст у нижньому колонтитулі швидких налаштувань</string>
     <string name="qs_footer_text_string_title">Власний текст у нижньому колонтитулі швидких налаштувань</string>
-    <string name="qs_footer_text_string_summary">Залишіть пустим для стандартного тексту YAAP</string>
+    <string name="qs_footer_text_string_summary">Залишіть пустим для стандартного тексту NAAP</string>
 
     <!-- About -->
     <string name="about_title">Про нас</string>
