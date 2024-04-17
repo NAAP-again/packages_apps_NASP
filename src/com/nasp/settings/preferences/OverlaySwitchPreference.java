@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yasp.settings.preferences;
+package com.nasp.settings.preferences;
 
 import static android.os.UserHandle.CURRENT;
 import static android.os.UserHandle.USER_CURRENT;

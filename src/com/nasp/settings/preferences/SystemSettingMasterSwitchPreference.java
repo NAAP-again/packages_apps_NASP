@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yasp.settings.preferences;
+package com.nasp.settings.preferences;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -22,23 +22,23 @@ import android.util.AttributeSet;
 import androidx.core.content.res.TypedArrayUtils;
 
 import com.android.settingslib.PrimarySwitchPreference;
-import com.yasp.settings.preferences.GlobalSettingsStore;
+import com.nasp.settings.preferences.SystemSettingsStore;
 
-public class GlobalSettingMasterSwitchPreference extends PrimarySwitchPreference {
+public class SystemSettingMasterSwitchPreference extends PrimarySwitchPreference {
 
-    public GlobalSettingMasterSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
+    public SystemSettingMasterSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        setPreferenceDataStore(new GlobalSettingsStore(context.getContentResolver()));
+        setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
-    public GlobalSettingMasterSwitchPreference(Context context, AttributeSet attrs) {
+    public SystemSettingMasterSwitchPreference(Context context, AttributeSet attrs) {
         this(context, attrs, TypedArrayUtils.getAttr(context,
                 com.android.settingslib.R.attr.preferenceStyle,
                 android.R.attr.preferenceStyle));
     }
 
-    public GlobalSettingMasterSwitchPreference(Context context) {
-        super(context, null);
+    public SystemSettingMasterSwitchPreference(Context context) {
+        this(context, null);
     }
 
 }

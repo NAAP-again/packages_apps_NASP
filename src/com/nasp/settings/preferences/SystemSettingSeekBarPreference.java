@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 AICP
+ * Copyright (C) 2016-2019 crDroid Android Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,31 +14,25 @@
  * limitations under the License.
  */
 
-package com.yasp.settings.preferences;
+package com.nasp.settings.preferences;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
-import androidx.core.content.res.TypedArrayUtils;
+public class SystemSettingSeekBarPreference extends CustomSeekBarPreference {
 
-import com.android.settingslib.PrimarySwitchPreference;
-import com.yasp.settings.preferences.SystemSettingsStore;
-
-public class SystemSettingMasterSwitchPreference extends PrimarySwitchPreference {
-
-    public SystemSettingMasterSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
+    public SystemSettingSeekBarPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
-    public SystemSettingMasterSwitchPreference(Context context, AttributeSet attrs) {
-        this(context, attrs, TypedArrayUtils.getAttr(context,
-                com.android.settingslib.R.attr.preferenceStyle,
-                android.R.attr.preferenceStyle));
+    public SystemSettingSeekBarPreference(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
-    public SystemSettingMasterSwitchPreference(Context context) {
-        this(context, null);
+    public SystemSettingSeekBarPreference(Context context) {
+        super(context, null);
+        setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
-
 }

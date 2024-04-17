@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yasp.settings.preferences;
+package com.nasp.settings.preferences;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -22,7 +22,7 @@ import android.util.AttributeSet;
 import androidx.core.content.res.TypedArrayUtils;
 
 import com.android.settingslib.PrimarySwitchPreference;
-import com.yasp.settings.preferences.SecureSettingsStore;
+import com.nasp.settings.preferences.SecureSettingsStore;
 
 public class SecureSettingMasterSwitchPreference extends PrimarySwitchPreference {
 

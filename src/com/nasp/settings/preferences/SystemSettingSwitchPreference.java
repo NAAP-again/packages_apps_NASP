@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017-2018 AICP
+ * Copyright (C) 2017 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,38 +14,38 @@
  * limitations under the License.
  */
 
-package com.yasp.settings.preferences;
+package com.nasp.settings.preferences;
 
 import android.content.Context;
-import android.text.TextUtils;
 import android.util.AttributeSet;
 
-import androidx.preference.ListPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
-public class SystemSettingListPreference extends ListPreference {
+public class SystemSettingSwitchPreference extends SwitchPreferenceCompat {
 
-    public SystemSettingListPreference(Context context, AttributeSet attrs, int defStyle) {
+    public SystemSettingSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
-    public SystemSettingListPreference(Context context, AttributeSet attrs) {
+    public SystemSettingSwitchPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
-    public SystemSettingListPreference(Context context) {
+    public SystemSettingSwitchPreference(Context context) {
         super(context);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
     @Override
     protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
-        // This is what default ListPreference implementation is doing without respecting
+        // This is what default TwoStatePreference implementation is doing without respecting
         // real default value:
-        //setValue(restoreValue ? getPersistedString(mValue) : (String) defaultValue);
+        //setChecked(restoreValue ? getPersistedBoolean(mChecked)
+        //        : (Boolean) defaultValue);
         // Instead, we better do
-        setValue(restoreValue ? getPersistedString((String) defaultValue) : (String) defaultValue);
+        setChecked(restoreValue ? getPersistedBoolean((Boolean) defaultValue)
+                : (Boolean) defaultValue);
     }
-
 }

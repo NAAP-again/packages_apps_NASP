@@ -14,7 +14,7 @@
  * under the License.
  */
 
-package com.yasp.settings;
+package com.nasp.settings;
 
 import android.app.Activity;
 import android.content.Context;
@@ -43,7 +43,7 @@ import android.view.WindowManager;
 import java.lang.Runtime;
 
 public final class Utils {
-    private static final String TAG = "YaspUtils";
+    private static final String TAG = "NaspUtils";
 
     // Device types
     private static final int DEVICE_PHONE = 0;

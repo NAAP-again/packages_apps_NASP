@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016-2019 crDroid Android Project
+ * Copyright (C) 2017 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,25 +13,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yasp.settings.preferences;
+
+package com.nasp.settings.preferences;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
-public class GlobalSettingSeekBarPreference extends CustomSeekBarPreference {
+import androidx.core.content.res.TypedArrayUtils;
 
-    public GlobalSettingSeekBarPreference(Context context, AttributeSet attrs, int defStyle) {
+import com.android.settingslib.PrimarySwitchPreference;
+import com.nasp.settings.preferences.GlobalSettingsStore;
+
+public class GlobalSettingMasterSwitchPreference extends PrimarySwitchPreference {
+
+    public GlobalSettingMasterSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         setPreferenceDataStore(new GlobalSettingsStore(context.getContentResolver()));
     }
 
-    public GlobalSettingSeekBarPreference(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        setPreferenceDataStore(new GlobalSettingsStore(context.getContentResolver()));
+    public GlobalSettingMasterSwitchPreference(Context context, AttributeSet attrs) {
+        this(context, attrs, TypedArrayUtils.getAttr(context,
+                com.android.settingslib.R.attr.preferenceStyle,
+                android.R.attr.preferenceStyle));
     }
 
-    public GlobalSettingSeekBarPreference(Context context) {
+    public GlobalSettingMasterSwitchPreference(Context context) {
         super(context, null);
-        setPreferenceDataStore(new GlobalSettingsStore(context.getContentResolver()));
     }
+
 }
