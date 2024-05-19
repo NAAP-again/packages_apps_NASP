@@ -116,6 +116,8 @@ public class OverlaySwitchPreference extends SwitchPreferenceCompat {
             throw new IllegalStateException("No overlay found for " + name);
         }
         // package with only one overlay
+        if (mOverlayManager.getOverlayInfo(name, CURRENT) == null)
+            throw new IllegalStateException("No overlay found for " + name);
         return mOverlayManager.getOverlayInfo(name, CURRENT).getOverlayIdentifier();
     }
 }
